@@ -10,6 +10,7 @@ import { ActorAltaComponent } from './pages/actor/actor-alta/actor-alta.componen
 import { ActorListadoComponent } from './pages/actor/actor-listado/actor-listado.component';
 import { PeliculaListadoComponent } from './pages/peliculas/pelicula-listado/pelicula-listado.component';
 import { TablaPeliculaComponent } from './pages/peliculas/tabla-pelicula/tabla-pelicula.component';
+import { DetallePeliculaComponent } from './pages/peliculas/detalle-pelicula/detalle-pelicula.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TablaPeliculaComponent } from './pages/peliculas/tabla-pelicula/tabla-p
     ActorAltaComponent,
     ActorListadoComponent,
     PeliculaListadoComponent,
-    TablaPeliculaComponent
+    TablaPeliculaComponent,
+    DetallePeliculaComponent
   ],
   imports: [
     BrowserModule,
