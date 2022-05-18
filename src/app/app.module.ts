@@ -5,10 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BienvenidoComponent } from './pages/bienvenido/bienvenido.component';
 import { BusquedaComponent } from './pages/busqueda/busqueda.component';
-import { PeliculaAltaComponent } from './pages/pelicula-alta/pelicula-alta.component';
-import { ActorAltaComponent } from './pages/actor-alta/actor-alta.component';
-import { ActorListadoComponent } from './pages/actor-listado/actor-listado.component';
-import { PeliculaListadoComponent } from './pages/pelicula-listado/pelicula-listado.component';
+import { PeliculaAltaComponent } from './pages/peliculas/pelicula-alta/pelicula-alta.component';
+import { ActorAltaComponent } from './pages/actor/actor-alta/actor-alta.component';
+import { ActorListadoComponent } from './pages/actor/actor-listado/actor-listado.component';
+import { PeliculaListadoComponent } from './pages/peliculas/pelicula-listado/pelicula-listado.component';
+import { TablaPeliculaComponent } from './pages/peliculas/tabla-pelicula/tabla-pelicula.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PeliculaListadoComponent } from './pages/pelicula-listado/pelicula-list
     PeliculaAltaComponent,
     ActorAltaComponent,
     ActorListadoComponent,
-    PeliculaListadoComponent
+    PeliculaListadoComponent,
+    TablaPeliculaComponent
   ],
   imports: [
     BrowserModule,
