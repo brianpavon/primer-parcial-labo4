@@ -5,3 +5,7 @@
 .trPointer:hover td{
     background-color: cadetblue;
 }
+
+img{
+    max-height: 8vh;
+}

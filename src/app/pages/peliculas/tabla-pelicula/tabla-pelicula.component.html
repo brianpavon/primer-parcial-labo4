@@ -9,12 +9,12 @@
     </thead>
     <tbody>
         <tr class="trPointer" *ngFor="let peli of listaDePeliculas" (click)="mostrarDetalles(peli)">
-            <td>{{ peli.id }}</td>
-            <td>{{ peli.nombre }}</td>
-            <td>{{ peli.tipo }}</td>
-            <td>{{ peli.fechaDeEstreno }}</td>
-            <td>{{ peli.cantidadDePublico }}</td>
-            <td>{{ peli.fotoDePelicula }}</td>
+            <td class="align-middle">{{ peli.id }}</td>
+            <td class="align-middle">{{ peli.nombre }}</td>
+            <td class="align-middle">{{ peli.tipo }}</td>
+            <td class="align-middle">{{ peli.fechaDeEstreno }}</td>
+            <td class="align-middle">{{ peli.cantidadDePublico }}</td>
+            <td> <img src="{{ peli.fotoDePelicula }}" alt=""></td>
         </tr>
     </tbody>
 </table>
