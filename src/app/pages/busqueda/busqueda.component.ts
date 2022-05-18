@@ -24,7 +24,6 @@ export class BusquedaComponent implements OnInit {
   }
   peliculaParaDetalle(peli: Pelicula){
     this.peliculaParaMostrar = peli;
-    console.log(peli);
-    
+    //console.log(peli);    
   }
 }

@@ -8,7 +8,7 @@
         <th>Foto de la Película</th>
     </thead>
     <tbody>
-        <tr *ngFor="let peli of listaDePeliculas" (click)="mostrarDetalles(peli)">
+        <tr class="trPointer" *ngFor="let peli of listaDePeliculas" (click)="mostrarDetalles(peli)">
             <td>{{ peli.id }}</td>
             <td>{{ peli.nombre }}</td>
             <td>{{ peli.tipo }}</td>

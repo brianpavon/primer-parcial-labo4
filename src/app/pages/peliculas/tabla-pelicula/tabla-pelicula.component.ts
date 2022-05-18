@@ -15,8 +15,8 @@ export class TablaPeliculaComponent implements OnInit {
   }
   mostrarDetalles(paramPelicula:Pelicula){
     this.peliculaSeleccionada.emit(paramPelicula);
-    console.log(paramPelicula);
-    
+    //De aca va al componente busqueda asi despues va al componente detalle
+    //console.log(paramPelicula);    
   }
 
 }
