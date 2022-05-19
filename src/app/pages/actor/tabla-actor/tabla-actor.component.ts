@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Actor } from 'src/app/clases/actor';
 import { ActoresService } from 'src/app/services/actores.service';
@@ -9,8 +9,8 @@ import { ActoresService } from 'src/app/services/actores.service';
   styleUrls: ['./tabla-actor.component.css']
 })
 export class TablaActorComponent implements OnInit {
-  listaActores:Actor[] = [];
-  //listaActores!:Observable<Actor[]>;
+  @Output() actorSeleccionado: EventEmitter<any> = new EventEmitter<any>();
+  listaActores:Actor[] = [];  
   constructor(private servActores:ActoresService) {
 
   }
@@ -22,10 +22,15 @@ export class TablaActorComponent implements OnInit {
   cargarActores(){
     this.servActores.devolverActores().subscribe(
       actores=>{
-        console.log(actores);
+        //console.log(actores);
         this.listaActores=actores;
         //console.log(this.listaActores);
       });
   }
+
+  enviarActor(actor:Actor){
+    this.actorSeleccionado.emit(actor);
+  }
+
 
 }

@@ -21,6 +21,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { TablaActorComponent } from './pages/actor/tabla-actor/tabla-actor.component';
+import { AngularFireStorage, AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import { TablaActorComponent } from './pages/actor/tabla-actor/tabla-actor.compo
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

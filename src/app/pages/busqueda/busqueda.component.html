@@ -5,7 +5,8 @@
       <div class="container">
         <h1 class="display-3">Listado de Películas</h1>
         <div class="table-responsive">
-            <app-tabla-pelicula [listaDePeliculas]="listaPeliculasBusqueda" (peliculaSeleccionada)="peliculaParaDetalle($event)"></app-tabla-pelicula>
+            <!--<app-tabla-pelicula [listaDePeliculas]="listaPeliculasBusqueda" (peliculaSeleccionada)="peliculaParaDetalle($event)"></app-tabla-pelicula>-->
+            <app-tabla-pelicula [listaDePeliculas]="pelisFirestore" (peliculaSeleccionada)="peliculaParaDetalle($event)"></app-tabla-pelicula>
         </div>
         <!--<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>-->
         <p><a class="btn btn-primary btn-lg" routerLink="/pelicula/alta" role="button">Nueva Película &raquo;</a></p>
