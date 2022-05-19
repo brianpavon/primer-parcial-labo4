@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
 import { Actor } from 'src/app/clases/actor';
+import { Paises } from 'src/app/interfaces/paises';
 
 @Component({
   selector: 'app-actor-alta',
@@ -11,6 +12,7 @@ export class ActorAltaComponent implements OnInit {
   nuevoActor!: Actor;
   listaActores:Actor[] = []
   formularioActor : FormGroup;
+  eligioPais:boolean = false;
 
   constructor(private fb:FormBuilder) {
     this.formularioActor = this.fb.group({
@@ -25,9 +27,18 @@ export class ActorAltaComponent implements OnInit {
   }
 
   altaActor(){
-    console.log('en el alta');
-    console.log(this.formularioActor.value);
-    
+    //console.log('en el alta');
+    console.log(this.formularioActor.value.nacionalidad);
+    this.nuevoActor = this.formularioActor.value;
+    this.listaActores.push(this.nuevoActor);
+    console.log(this.listaActores);
+    this.formularioActor.reset();
+  }
+
+  cargarPais(pais:Paises){
+    console.log(pais.name.common);
+    this.eligioPais= true;
+    this.formularioActor.controls.nacionalidad.patchValue(pais.name.common);
   }
 
 }

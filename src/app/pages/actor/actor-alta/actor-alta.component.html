@@ -7,24 +7,25 @@
     </div>
     <div class="row">
       <div class="col-md-4 order-md-2 mb-4">
-        <app-tabla-paises></app-tabla-paises>        
+        <app-tabla-paises (paisSeleccionado)="cargarPais($event)"></app-tabla-paises>        
       </div>
       <div class="col-md-8 order-md-1">
         <h4 class="mb-3">Datos del actor</h4>
         <form [formGroup]="formularioActor" (ngSubmit)="altaActor()" class="needs-validation">
           <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="firstName">Nombre</label>
-              <input type="text" class="form-control" id="nombre" placeholder="Ingrese el Nombre" formControlName="nombre" required/>
-              <div class="invalid" *ngIf="formularioActor.controls.nombre.errors?.required && formularioActor.controls.nombre.touched">
-                El nombre es requerido.
-              </div>
-            </div>
+            
             <div class="col-md-6 mb-3">
               <label for="lastName">Apellido</label>
               <input type="text" class="form-control" id="apellido" placeholder="Ingrese el apellido" formControlName="apellido" required/>
               <div class="invalid" *ngIf="formularioActor.controls.apellido.errors?.required && formularioActor.controls.apellido.touched">
                 El apellido es requerido.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Ingrese el Nombre" formControlName="nombre" required/>
+              <div class="invalid" *ngIf="formularioActor.controls.nombre.errors?.required && formularioActor.controls.nombre.touched">
+                El nombre es requerido.
               </div>
             </div>
           </div>
@@ -39,11 +40,16 @@
                 El rango de edad no es válido.
               </div>
             </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-md-6 mb-3" *ngIf="eligioPais">
               <label for="lastName">Nacionalidad</label>
               <input type="text" class="form-control" id="nacionalidad" placeholder="" formControlName="nacionalidad" required/>
               <div class="invalid" *ngIf="formularioActor.controls.nacionalidad.errors?.required && formularioActor.controls.nacionalidad.touched">
                 Debe elegir un país.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3" *ngIf="!eligioPais">
+              <div class="invalid">
+                Seleccione un país de la lista de la derecha.
               </div>
             </div>
           </div>
