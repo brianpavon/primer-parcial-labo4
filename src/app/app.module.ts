@@ -12,6 +12,9 @@ import { TablaPeliculaComponent } from './pages/peliculas/tabla-pelicula/tabla-p
 import { DetallePeliculaComponent } from './pages/peliculas/detalle-pelicula/detalle-pelicula.component';
 import { MenuPrincipalComponent } from './pages/menu-principal/menu-principal.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { TablaPaisesComponent } from './pages/tabla-paises/tabla-paises.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,11 +28,14 @@ import { FooterComponent } from './pages/footer/footer.component';
     TablaPeliculaComponent,
     DetallePeliculaComponent,
     MenuPrincipalComponent,
-    FooterComponent
+    FooterComponent,
+    TablaPaisesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
