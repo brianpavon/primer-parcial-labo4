@@ -13,7 +13,7 @@ import { DetallePeliculaComponent } from './pages/peliculas/detalle-pelicula/det
 import { MenuPrincipalComponent } from './pages/menu-principal/menu-principal.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { TablaPaisesComponent } from './pages/tabla-paises/tabla-paises.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -35,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
