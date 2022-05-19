@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
+import { TablaActorComponent } from './pages/actor/tabla-actor/tabla-actor.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AngularFireModule } from '@angular/fire/compat';
     DetallePeliculaComponent,
     MenuPrincipalComponent,
     FooterComponent,
-    TablaPaisesComponent
+    TablaPaisesComponent,
+    TablaActorComponent
   ],
   imports: [
     BrowserModule,
